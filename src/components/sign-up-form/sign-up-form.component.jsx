@@ -80,7 +80,7 @@ const SignUpForm = () => {
                             name="confirmPassword" 
                             value={confirmPassword}></FormInput>
 
-                <Button buttonType="" type="submit">Sign up</Button>
+                <Button type="submit">Sign up</Button>
             </form>
         </div>
     )
