@@ -1,12 +1,12 @@
 
-import {useState, useContext} from "react"
+import {useState} from "react"
 import { 
          signInWithGooglePopup,
-         signInAuthUserWithEmailAndPassword, } from "../../utils/firebase/firbase.utils"
+         signInAuthUserWithEmailAndPassword,
+         createUserDocumentFromAuth, } from "../../utils/firebase/firbase.utils"
 import FormInput from "../form-input/form-input.component"
 import "./sign-in-form.styles.scss"
 import Button from "../button/button.component"
-import { UserContext } from "../../contexts/user.context"
 const defaultFormFields = {
     email: "",
     password: "",
@@ -15,15 +15,13 @@ const defaultFormFields = {
 const SignInForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields)
     const {email, password} = formFields
-    const { setCurrentUser } = useContext(UserContext)
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields)
     }
 
     const signInWithGoogle = async () => {
-        const {user} = await signInWithGooglePopup()
-        setCurrentUser(user)
+        await signInWithGooglePopup()
 
     }
 
@@ -33,7 +31,6 @@ const SignInForm = () => {
         try{
             const {user} = await signInAuthUserWithEmailAndPassword(email, password)
             resetFormFields()
-            await setCurrentUser(user)
 
         }catch(error){
             switch(error.code){
