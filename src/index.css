@@ -1,12 +1,13 @@
 body {
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
+  padding: 20px 40px;
+  font-family: "PT Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 a {
@@ -15,7 +16,5 @@ a {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-/*# sourceMappingURL=index.css.map */
+  box-sizing: border-box;
+}/*# sourceMappingURL=index.css.map */
