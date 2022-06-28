@@ -1,3 +1,3 @@
 # capstone
-A commercial merch website. 
+E-commerce project.
 Try it out: https://shockmerch.netlify.app
