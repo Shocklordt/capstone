@@ -1,8 +1,8 @@
-# capstone
+# Capstone
 E-commerce project.
-# motivation
-# quick start
-# usage
-# contributing
+# Motivation
+# Quick Start
+# Usage
+# Contributing
 ##
 
